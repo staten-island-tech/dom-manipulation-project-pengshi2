@@ -1,0 +1,7 @@
+html,
+body,
+* {
+  padding: 5;
+  margin: 5;
+  text-align: center;
+}
