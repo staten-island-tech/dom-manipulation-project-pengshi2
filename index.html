@@ -1,5 +1,6 @@
 <html lang="en">
-  <head>
+  <!DOCTYPE html>
+   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,11 +8,22 @@
     <title>Document</title>
   </head>
   <body>
-    <script src="index.js"></script>
-    Title: <input type="text" id="title" size="10" />
-    <ul>
-      <li id="item">querySelector</li>
-      <li id="item">querySelectorAll</li>
+    <div>
+   <ul>
+   <li id="person"> Joe</li>
+   <li id="person"> Jake</li>
+   <li id="person"> Nathaniel</li>
+   <li id="person"> John</li>
+   <li id="person"> Billy </li>
+   <li id="person"> Tim</li>
+   <li id="person"> Johnny</li>
+   <li id="person"> Timmy</li>
+   <li is="person"> Bob</li>
     </ul>
+   </div>
+   <script src="index.js"> 
+    const allPeople = document.getElementById(".person");
+    console.log(allPeople);
+  </script>
   </body>
 </html>
