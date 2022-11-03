@@ -1,8 +1,18 @@
-// const domSelectors = {};
-// const nodeList = document.querySelectorAll("items");
-// for (let i = 0; i < nodeList.length; i++) {
-//   nodeList[i].style.backgroundColor = "red";
-// }
-
-const allPeople = document.querySelectorAll(".people");
+// const domSelectors = {
+//   title: document.getElementById("title"),
+//   artist: document.getElementById("artist"),
+//   url: document.getElementById("url"),
+//   display: document.getElementById("display"),
+// };
+const allPeople = document.querySelectorAll(".person");
 console.log(allPeople);
+
+let image = document.theform.bg.value;
+
+function myFunction() {
+  document.body.style.backgroundColor = "red";
+}
+
+function theFunction() {
+  document.getElementById("myDiv").style.backgroundImage = "url('1999.jpg')";
+}
