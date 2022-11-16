@@ -19,6 +19,9 @@ function color() {
   element.style.backgroundColor = randomColor;
 }
 
-function fortnite() {
-  myDiv.style.backgroundColor = "white";
-}
+document.getElementById("myDiv").onclick = color();
+
+let randomColor2 = "#" + Math.floor(Math.random() * 16777215).toString(16);
+
+getElementById("box");
+document.theform.box = randomColor;
