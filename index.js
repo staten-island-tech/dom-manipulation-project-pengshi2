@@ -4,7 +4,7 @@ const DOMselectors = {
   artist: document.getElementById("artist"),
   url: document.getElementById("url"),
   display: document.getElementById("display"),
-  reset: document.getElementById("btn"),
+  reset: document.getElementById("reset"),
 };
 
 function fun() {
@@ -21,8 +21,12 @@ function color() {
 
 document.getElementById("myDiv").onclick = color();
 
-let randomColor2 = "#" + Math.floor(Math.random() * 16777215).toString(16);
+const deleteButtons = document.querySelectorAll(".del");
 
-document.theform.box = randomColor;
+deleteButtons.forEach((button) => {
+  button.addEventListener("click", removeMe);
+});
 
-document.removeChild();
+function removeMe() {
+  this.closest("li").remove();
+}
