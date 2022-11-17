@@ -1,9 +1,9 @@
 const DOMselectors = {
-  submit: document.querySelector(".btn"),
-  title: document.getElementById("title"),
-  artist: document.getElementById("artist"),
-  url: document.getElementById("url"),
-  display: document.getElementById("display"),
+  name: document.querySelector(".name"),
+  age: document.getElementById(".age"),
+  grade: document.getElementById(".grade"),
+  height: document.getElementById(".height"),
+  average: document.getElementById(".average"),
   reset: document.getElementById("reset"),
 };
 
