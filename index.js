@@ -9,13 +9,13 @@ const DOMselectors = {
   things: document.getElementById("things"),
 };
 
-const button = document.getElementById("submit");
+const button = document.getElementById("insert");
 button.addEventListener("click", () => {
   {
-    let listItem = document.createElement("p");
-    listItem.appendChild(text);
+    let listItem = document.createElement("li");
+    listItem.appendChild(p);
   }
-  let list = document.getElementById("li");
+  let list = document.getElementById("list");
   list.appendChild(listItem);
 });
 
@@ -33,6 +33,22 @@ DOMselectors.form.addEventListener("submit", function () {
   createElement();
   resetInputs();
 });
+function elementGenerator() {
+  addEventListener("submit");
+  h1 = DOMselectors.name.value;
+  h2 = DOMselectors.grade.value;
+  p = DOMselectors.school.value;
+  DOMselectors.objects.insertAdjacentHTML(
+    "afterend",
+    `<div class="object">
+         <h1>${h1} </h1>          
+          <h2>${h2}</h2>
+           <p>${p}</p>
+          <br>
+          <button class="remove-button">Remove</button>
+  </div>`
+  );
+}
 
 function setDeleteButtons() {
   const buttons = Array.from(document.getElementsByClassName("remove-button"));
@@ -48,8 +64,9 @@ DOMselectors.button.addEventListener("click", function () {
   DOMselectors.form.insertAdjacentHTML("afterend", `<p> ${input} </p>`);
 });
 
+document.getElementById(insert).onClick = reset();
 function reset() {
-  DOMselectors.nameInput.value = "";
-  DOMselectors.gradeInput.value = "";
-  DOMselectors.schoolInput.value = "";
+  DOMselectors.name.value = ``;
+  DOMselectors.grade.value = ``;
+  DOMselectors.school.value = ``;
 }
