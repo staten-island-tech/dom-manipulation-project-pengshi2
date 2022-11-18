@@ -2,10 +2,25 @@ html,
 body,
 * {
   padding: 5;
-  margin: 0;
+  margin: 3;
   text-align: center;
-  margin: 10px auto;
-  background-color:rgb(254, 143, 252);
+  font-family: 'Lato', sans-serif;
 } 
 
+.card {
+  margin-bottom: 100px;
+  width: 21%;
+  text-align: center;
+  border: 1px black solid;
+  color: rgb(255, 255, 255);
+  background-color: rgb(255, 183, 197);
+  margin:auto;
+}
 
+.remove-button {
+  width: 40%;
+  height: 30px;
+  border: 1px white;
+}
+
+ 

@@ -1,56 +1,39 @@
-const DOMselectors = {
+const DOMSelectors = {
   form: document.getElementById("form"),
-  name: document.getElementById(".name"),
-  grade: document.getElementById(".grade"),
-  school: document.getElementById("school"),
-  reset: document.getElementById("reset"),
-  input: document.getElementById("input"),
-  button: document.getElementById("btn"),
-  things: document.getElementById("things"),
+  nameInput: document.getElementById("name-input"),
+  yearInput: document.getElementById("year-input"),
+  schoolInput: document.getElementById("school-input"),
+  osisInput: document.getElementById("osis-input"),
+  card: document.getElementById("card"),
 };
 
-const button = document.getElementById("insert");
-button.addEventListener("click", () => {
-  {
-    let listItem = document.createElement("li");
-    listItem.appendChild(p);
-  }
-  let list = document.getElementById("list");
-  list.appendChild(listItem);
-});
-
-const deleteButtons = document.querySelectorAll(".del");
-
-deleteButtons.forEach((button) => {
-  button.addEventListener("click", removeMe);
-});
-
-function removeMe() {
-  this.closest("li").remove();
-}
-
-DOMselectors.form.addEventListener("submit", function () {
-  createElement();
-  resetInputs();
-});
-function elementGenerator() {
-  addEventListener("submit");
-  h1 = DOMselectors.name.value;
-  h2 = DOMselectors.grade.value;
-  p = DOMselectors.school.value;
-  DOMselectors.objects.insertAdjacentHTML(
-    "afterend",
-    `<div class="object">
-         <h1>${h1} </h1>          
+function IDcreator() {
+  h1 = DOMSelectors.nameInput.value;
+  h2 = DOMSelectors.yearInput.value;
+  h3 = DOMSelectors.schoolInput.value;
+  p = DOMSelectors.osisInput.value;
+  DOMSelectors.schoolInput.value;
+  DOMSelectors.card.insertAdjacentHTML(
+    "afterbegin",
+    `<div class="card">
+         <h1>${h1}</h1>
           <h2>${h2}</h2>
+          <h3>${h3}</h3>
            <p>${p}</p>
-          <br>
+           <br>
           <button class="remove-button">Remove</button>
   </div>`
   );
 }
 
-function setDeleteButtons() {
+function reset() {
+  DOMSelectors.nameInput.value = ``;
+  DOMSelectors.yearInput.value = ``;
+  DOMSelectors.schoolInput.value = ``;
+  DOMSelectors.osisInput.value = ``;
+}
+
+function remove() {
   const buttons = Array.from(document.getElementsByClassName("remove-button"));
   buttons.forEach((button) => {
     button.addEventListener("click", function () {
@@ -59,14 +42,9 @@ function setDeleteButtons() {
   });
 }
 
-DOMselectors.button.addEventListener("click", function () {
-  let input = DOMselectors.input.value;
-  DOMselectors.form.insertAdjacentHTML("afterend", `<p> ${input} </p>`);
+DOMSelectors.form.addEventListener("submit", function () {
+  IDcreator();
+  event.preventDefault();
+  remove();
+  reset();
 });
-
-document.getElementById(insert).onClick = reset();
-function reset() {
-  DOMselectors.name.value = ``;
-  DOMselectors.grade.value = ``;
-  DOMselectors.school.value = ``;
-}

@@ -1,44 +1,32 @@
-<html lang="en">
+ <html lang="en">
   <!DOCTYPE html>
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
-  <body>
-    <form id = "form"> 
-      <p> ID Card Generator</p>
-      <label for = "name-input"> Name: </label>
-      <input id = "name-input">
+    <p> ID Card Generator</p>
+    <form id ="form"> 
+      <label for ="name-input"> Name: </label>
+      <input id ="name-input">
       <br>
-      <label for = "grade-input"> Grade: </label>
-      <input id = "grade-input">
+      <label for ="year-input"> Year: </label>
+      <input id ="year-input">
       <br>
-      <label for = "school-input"> School: </label>
-      <input id = "school-input">
+      <label for ="school-input"> School: </label>
+      <input id ="school-input">
       <br>
-      <button type = "submit" id = "submit"> Done</button> 
-      <br> 
-      <input type = "text" id = "input"/>
+      <label for ="osis-input"> OSIS#: </label>
+      <input id ="osis-input">
       <br>
-      <input type = "text" id = "input"/>
-      <br>
-      <input type = "text" id = "input"/>
-      <br>
-      <input type = "text" id = "input"/>
-      <br>
-      <button type = "button" id = "btn"  > CLICK ME!</button>
+      <button type ="submit" id ="submit"> Done</button> 
      </form>
-     <div id = "things"> </div>
-    </body>
-    <ul id = "list"> 
-    <li> Delete <button class = "del"> X </button></li>
-    <li> Delete #2<button class = "del"> X </button></li>
-    <button id = "insert"> Insert</button>
-    </ul>
-    <script src="index.js"></script>
-  </body>
-</html>  -->
- -->
+      <div id = "card"></div>
+     </body>
+     <script src = "index.js"> </script> 
+    </html>
