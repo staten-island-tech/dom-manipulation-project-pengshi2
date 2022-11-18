@@ -1,33 +1,23 @@
 const DOMselectors = {
-  name: document.querySelector(".name"),
-  age: document.getElementById(".age"),
+  form: document.getElementById("form"),
+  name: document.getElementById(".name"),
   grade: document.getElementById(".grade"),
-  height: document.getElementById(".height"),
-  average: document.getElementById(".average"),
+  school: document.getElementById("school"),
   reset: document.getElementById("reset"),
+  input: document.getElementById("input"),
+  button: document.getElementById("btn"),
+  things: document.getElementById("things"),
 };
-
-let randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
-
-console.log(randomColor);
 
 const button = document.getElementById("submit");
 button.addEventListener("click", () => {
   {
-    let boxInput = document.getElementById("task").value;
     let listItem = document.createElement("li");
-    let text = document.createTextNode(boxInput);
     listItem.appendChild(text);
   }
   let list = document.getElementById("list");
   list.appendChild(listItem);
 });
-
-function color() {
-  let element = document.getElementById("myDiv");
-  element.style.backgroundColor = randomColor;
-}
-document.getElementById("myDiv").onclick = color();
 
 const deleteButtons = document.querySelectorAll(".del");
 
@@ -37,4 +27,45 @@ deleteButtons.forEach((button) => {
 
 function removeMe() {
   this.closest("li").remove();
+}
+
+DOMselectors.form.addEventListener("submit", function () {
+  createElement();
+  resetInputs();
+});
+// function elementGenerator() {
+//   addEventListener;
+//   h1 = DOMselectors.name.value;
+//   h2 = DOMselectors.grade.value;
+//   p = DOMselectors.school.value;
+//   DOMselectors.objects.insertAdjacentHTML{
+//   //   "afterend",
+//   //   `<div class="object">
+//   //         <h1>${h1} </h1>
+//   //           <h2>${h2}</h2>
+//   //           <p>${p}</p>
+//   //           <br>
+//   //           <button class="remove-button">Remove</button>
+//   //   </div>`
+//   // );
+// }
+
+function setDeleteButtons() {
+  const buttons = Array.from(document.getElementsByClassName("remove-button"));
+  buttons.forEach((button) => {
+    button.addEventListener("click", function () {
+      this.parentElement.remove();
+    });
+  });
+}
+
+DOMselectors.button.addEventListener("click", function () {
+  let input = DOMselectors.input.value;
+  DOMselectors.form.insertAdjacentHTML("afterend", `<p> ${input} </p>`);
+});
+
+function reset() {
+  DOMselectors.nameInput.value = "";
+  DOMselectors.gradeInput.value = "";
+  DOMselectors.schoolInput.value = "";
 }
