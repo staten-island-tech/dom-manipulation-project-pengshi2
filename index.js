@@ -12,10 +12,10 @@ const DOMselectors = {
 const button = document.getElementById("submit");
 button.addEventListener("click", () => {
   {
-    let listItem = document.createElement("li");
+    let listItem = document.createElement("p");
     listItem.appendChild(text);
   }
-  let list = document.getElementById("list");
+  let list = document.getElementById("li");
   list.appendChild(listItem);
 });
 
@@ -33,22 +33,6 @@ DOMselectors.form.addEventListener("submit", function () {
   createElement();
   resetInputs();
 });
-// function elementGenerator() {
-//   addEventListener;
-//   h1 = DOMselectors.name.value;
-//   h2 = DOMselectors.grade.value;
-//   p = DOMselectors.school.value;
-//   DOMselectors.objects.insertAdjacentHTML{
-//   //   "afterend",
-//   //   `<div class="object">
-//   //         <h1>${h1} </h1>
-//   //           <h2>${h2}</h2>
-//   //           <p>${p}</p>
-//   //           <br>
-//   //           <button class="remove-button">Remove</button>
-//   //   </div>`
-//   // );
-// }
 
 function setDeleteButtons() {
   const buttons = Array.from(document.getElementsByClassName("remove-button"));
